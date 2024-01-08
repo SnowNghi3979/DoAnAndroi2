@@ -36,7 +36,7 @@ const SignInScreen = ({}) => {
         // Lấy giá trị từ TextInput và kiểm tra với dữ liệu từ API
         Keyboard.dismiss();
         setLoading(true);
-        fetch('http://192.168.137.108:9007/users')
+        fetch('http://192.168.137.220:9007/users')
           .then(response => response.json())
           .then(data => {
             setLoading(false);
@@ -83,17 +83,17 @@ const SignInScreen = ({}) => {
             )}
             
             <View style={styles.header}>
-                <Text style={styles.text_header}>Welcome!</Text>
+                <Text style={styles.text_header}>Xin chào mọi người!</Text>
             </View>
             <View style={[styles.footer]}>
-                <Text style={styles.text_footer}>Username</Text>
+                <Text style={styles.text_footer}>Tên đăng nhập</Text>
                 <View style={styles.action}>
                     <FontAwesome 
                         name="user-o"
                         size={20}
                     />
                     <TextInput 
-                        placeholder="Your Username"
+                        placeholder=""
                         placeholderTextColor="#666666"
                         style={styles.textInput}
                         value={username} // Bắt giá trị từ state
@@ -101,14 +101,14 @@ const SignInScreen = ({}) => {
                     />
                 </View>
 
-                <Text style={[styles.text_footer, { marginTop: 35 }]}>Password</Text>
+                <Text style={[styles.text_footer, { marginTop: 35 }]}>Mật khẩu</Text>
                 <View style={styles.action}>
                     <Feather 
                         name="lock"
                         size={20}
                     />
                     <TextInput 
-                        placeholder="Your Password"
+                        placeholder=""
                         placeholderTextColor="#666666"
                         secureTextEntry={true}
                         style={styles.textInput}
@@ -118,7 +118,7 @@ const SignInScreen = ({}) => {
                 </View>
 
                 <TouchableOpacity>
-                    <Text style={{color: '#009387', marginTop: 15}}>Forgot password?</Text>
+                    <Text style={{color: '#db4040', marginTop: 15}}>Quên mật khẩu?</Text>
                 </TouchableOpacity>
                 <View style={styles.button}>
                     <TouchableOpacity
@@ -126,22 +126,22 @@ const SignInScreen = ({}) => {
                         onPress={handleSignIn}
                     >
                         <LinearGradient
-                            colors={['#08d4c4', '#01ab9d']}
+                            colors={['#FFCCCC', '#FFCCCC']}
                             style={styles.signIn}
                         >
-                            <Text style={styles.textSign}       >Sign In</Text>
+                            <Text style={styles.textSign}       >Đăng nhập</Text>
                         </LinearGradient>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate('SignUpScreen')}
                         style={[styles.signIn, {
-                            borderColor: '#009387',
+                            borderColor: '#FFCCCC',
                             borderWidth: 1,
                             marginTop: 15
                         }]}
                     >
-                        <Text style={styles.textSign}>Sign Up</Text>
+                        <Text style={styles.textSign}>Đăng kí </Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -178,7 +178,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
     container: {
         flex: 1, 
-        backgroundColor: '#009387'
+        backgroundColor: '#FFCCCC'
     },
     loading: {
         position: 'absolute',

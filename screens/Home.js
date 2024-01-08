@@ -54,7 +54,7 @@ const Home= ({route}) => {
   useEffect(() => {
     // Thực hiện cuộc gọi API và lấy dữ liệu từ URL của bạn
     
-    fetch('http://192.168.137.108:9007/categorys')
+    fetch('http://192.168.137.220:9007/categorys')
       .then(response => response.json())
       .then(data => {
         data.sort((a, b) => b.id - a.id);
@@ -81,7 +81,7 @@ const Home= ({route}) => {
   useEffect(() => {
     // Thực hiện cuộc gọi API và lấy dữ liệu từ URL của bạn
     setLoading(true);
-    fetch('http://192.168.137.108:9007/products')
+    fetch('http://192.168.137.220:9007/products')
       .then(response => response.json())
       .then(data => {
         setLoading(false);
@@ -244,7 +244,7 @@ const quantity = useState('1');
               style={{
                 height: 25,
                 width: 25,
-                backgroundColor: COLORS.green,
+                backgroundColor: 'pink',
                 borderRadius: 5,
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -272,8 +272,8 @@ const quantity = useState('1');
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
       <View style={style.header}>
         <View>
-          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
-          <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Xin chào đến với cửa hàng</Text>
+          <Text style={{fontSize: 38, color: COLORS.red, fontWeight: 'bold'}}>
            SNOW NGHI
           </Text>
         </View>
@@ -284,14 +284,14 @@ const quantity = useState('1');
       <View style={{marginTop: 30, flexDirection: 'row'}}>
         <View style={style.searchContainer}>
           <Icon name="search" size={25} style={{marginLeft: 20}} />
-          <TextInput placeholder="Search" style={style.input}  value={searchQuery} onChangeText={(text) => {
+          <TextInput placeholder="Tìm kiếm" style={style.input}  value={searchQuery} onChangeText={(text) => {
               setSearchQuery(text);
               handleSearch(text);
             }} />
         </View>
-       <TouchableOpacity  style={style.sortBtn} > 
+       {/* <TouchableOpacity  style={style.sortBtn} > 
           <Icon name="sort" size={30} color={COLORS.white} />
-        </TouchableOpacity> 
+        </TouchableOpacity>  */}
         {/* <SortModal visible={isSortModalVisible}   onClose={handleSortModalClose}  islogin={route1} />
         isuser={userlogin} */}
       </View>

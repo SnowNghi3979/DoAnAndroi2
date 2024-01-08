@@ -45,10 +45,10 @@ function Cart({ route, navigation }) {
               <View style={{flex:1,justifyContent:'center'}}>
               <Text style={styles.name}>{data.item.product.name.length > 11 ? `${data.item.product.name.substring(0, 11)}...` : data.item.product.name}</Text>
               <Text style={styles.price1}>${(data.item.product.price).toFixed(1)} {data.item.price}</Text>
-              <Text style={styles.quantity}>Số Lượng: x  {data.item.quantity}</Text>
+              <Text style={styles.quantity}>Số Lượng:  x{data.item.quantity}</Text>
               </View>
               <View style={{flex:1,justifyContent:'center'}}>
-                  <Text style={styles.total}>Total: Snow Nghi {(data.item.product.price * data.item.quantity).toFixed(1)} {data.item.price} $</Text></View>
+                  <Text style={styles.total}>Tổng cộng: {(data.item.product.price * data.item.quantity).toFixed(1)} {data.item.price}$</Text></View>
             </View>
           </View>
           )}
@@ -74,8 +74,8 @@ function Cart({ route, navigation }) {
       </View>
       <View style={styles.bottom}>
         <View style={styles.price}>
-          <Text style={styles.totalPrice}>Total Price</Text>
-          <Text style={styles.byn900}>BYN {totalSum}</Text>
+          <Text style={styles.totalPrice}>Thành tiền</Text>
+          <Text style={styles.byn900}>{totalSum}</Text>
         </View>
         <TouchableOpacity
           style={{ flex: 1 }}
@@ -150,10 +150,10 @@ const styles = StyleSheet.create({
   byn900: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "green",
+    color: "black",
   },
   button: {
-    backgroundColor: "blue",
+    backgroundColor: "pink",
     flexDirection: "row",
     padding: 10,
     borderRadius: 5,
@@ -199,7 +199,7 @@ flex: 1, // Đặt flex để chia đều khoảng trống giữa hai phần t�
   },
   price1: {
     fontSize: 14,
-    color: "green",
+    color: "pink",
   },
   quantity: {
     fontSize: 14,
@@ -208,7 +208,7 @@ flex: 1, // Đặt flex để chia đều khoảng trống giữa hai phần t�
   },
   total: {
     fontSize: 14,
-    color: "red",
+    color: "black",
   },
 
 

@@ -30,7 +30,7 @@ export default function Profile() {
   const handleSave = async () => {
     // Assuming you have an API endpoint to update user information
     try {
-      const response = await fetch(`http://192.168.137.108:9007/users/${userInfo.id}`, {
+      const response = await fetch(`http://192.168.137.220:9007/users/${userInfo.id}`, {
         method: 'PUT', // or 'POST' depending on your API
         headers: {
           'Content-Type': 'application/json',

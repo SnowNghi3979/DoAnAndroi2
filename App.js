@@ -62,11 +62,11 @@ const App = (route) => {
       
         options={{
           tabBarLabel: "Trang chủ",
-          tabBarLabelStyle: { color: "rgb(50,205,50)" },
+          tabBarLabelStyle: { color: "#FFB6C1" },
           headerShown: false,
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <Entypo name="home" size={24} color="rgb(50,205,50)" />
+              <Entypo name="home" size={24} color="#FFB6C1" />
             ) : (
               <AntDesign name="home" size={24} color="black" />
             ),
@@ -77,13 +77,13 @@ const App = (route) => {
         component={Cart}
         options={{
           tabBarLabel: "Giỏ hàng",
-          tabBarLabelStyle: { color: "rgb(50,205,50)" },
+          tabBarLabelStyle: { color: "#FFB6C1" },
           headerShown: false,
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <AntDesign name="shoppingcart" size={24} color="rgb(50,205,50)" />
+              <AntDesign name="shoppingcart" size={24} color="#FFB6C1" />
             ) : (
-              <AntDesign name="shoppingcart" size={24} color="black" />
+              <AntDesign name="shoppingcart" size={24} color="pink" />
             ),
             tabBarBadge: cartData.length > 0 ? cartData.length : null, // Hiển thị badge (số lượng) nếu giỏ hàng có sản phẩm
         }}
@@ -95,13 +95,13 @@ const App = (route) => {
        
         options={{
           tabBarLabel: "Tài Khoản",
-          tabBarLabelStyle: { color: "rgb(50,205,50)" },
+          tabBarLabelStyle: { color: "#FFB6C1" },
           headerShown: false,
           tabBarIcon: ({ focused }) =>
             focused ? (
-              <Ionicons name="person" size={24} color="rgb(50,205,50)" />
+              <Ionicons name="person" size={24} color="#FFB6C1" />
             ) : (
-              <Ionicons name="person-outline" size={24} color="black" />
+              <Ionicons name="person-outline" size={24} color="pink" />
             ),
         }}
       />

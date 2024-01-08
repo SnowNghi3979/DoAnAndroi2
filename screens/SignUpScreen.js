@@ -114,7 +114,7 @@ const SignInScreen = ({ navigation }) => {
 
       
   
-      fetch('http://192.168.137.108:9007/users/add', {
+      fetch('http://192.168.137.220:9007/users/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -150,11 +150,11 @@ const SignInScreen = ({ navigation }) => {
     <View style={styles.container}>
       <StatusBar backgroundColor='#009387' barStyle="light-content" />
       <View style={styles.header}>
-        <Text style={styles.text_header}>Register Now!</Text>
+        <Text style={styles.text_header}>Đăng kí ở đây!</Text>
       </View>
       <View style={styles.footer}>
         <ScrollView>
-          <Text style={styles.text_footer}>Username</Text>
+          <Text style={styles.text_footer}>Tên đăng nhập</Text>
           <View style={styles.action}>
             <TextInput
               placeholder="Your Username"
@@ -169,7 +169,7 @@ const SignInScreen = ({ navigation }) => {
        
          
 
-          <Text style={[styles.text_footer, { marginTop: 35 }]}>Password</Text>
+          <Text style={[styles.text_footer, { marginTop: 35 }]}>Mật khẩu</Text>
           <View style={styles.action}>
             <TextInput
               placeholder="Your Password"
@@ -180,10 +180,10 @@ const SignInScreen = ({ navigation }) => {
               onChangeText={text => setPassword(text)}
             />
           </View>
-          <Text style={[styles.text_footer, { marginTop: 35 }]}>Confirm Password</Text>
+          <Text style={[styles.text_footer, { marginTop: 35 }]}>Xác nhận mật khẩu</Text>
           <View style={styles.action}>
             <TextInput
-              placeholder="Confirm Your Password"
+              placeholder="Confirm Password"
               secureTextEntry={true}
               style={styles.textInput}
               autoCapitalize="none"
@@ -191,7 +191,7 @@ const SignInScreen = ({ navigation }) => {
               onChangeText={text => setConfirmPassword(text)}
             />
    </View>
-   <Text style={[styles.text_footer, { marginTop: 35 }]}>Name</Text>
+   <Text style={[styles.text_footer, { marginTop: 35 }]}>Tên tài khoản</Text>
           <View style={styles.action}>
             <TextInput
               placeholder="Your Name"
@@ -216,7 +216,7 @@ const SignInScreen = ({ navigation }) => {
           </View>
 
 
-          <View style={styles.action}>
+          {/* <View style={styles.action}>
     <Picker
       style={{ flex: 1 }}
       selectedValue={selectedOption}
@@ -225,9 +225,9 @@ const SignInScreen = ({ navigation }) => {
       <Picker.Item label="Chọn ảnh từ thư viện" value="library" />
       <Picker.Item label="Chụp ảnh từ camera" value="camera" />
     </Picker>
-  </View>
+  </View> */}
 
-  <View style={styles.action}>
+  {/* <View style={styles.action}>
     <TouchableOpacity
       style={{ flex: 1, marginRight: 5 }}
       onPress={() => {
@@ -240,7 +240,7 @@ const SignInScreen = ({ navigation }) => {
     >
       <Text style={styles.textPrivate}>Thêm ảnh</Text>
     </TouchableOpacity>
-  </View>
+  </View> */}
 
   {image && (
             <Image source={{ uri: image.uri }} style={{ width: 200, height: 200 }} />
@@ -248,27 +248,27 @@ const SignInScreen = ({ navigation }) => {
 
           <View style={styles.textPrivate}>
             <Text style={styles.color_textPrivate}>
-              By signing up you agree to our
+              Đồng ý điều khoản
             </Text>
-            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>{" "}Terms of service</Text>
-            <Text style={styles.color_textPrivate}>{" "}and</Text>
-            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>{" "}Privacy policy</Text>
+            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>{" "}Điều khoản dịch vụ</Text>
+            <Text style={styles.color_textPrivate}>{" "} và </Text>
+            <Text style={[styles.color_textPrivate, { fontWeight: 'bold' }]}>{" "}Chính sách bảo mật</Text>
           </View>
 
           <View style={styles.button}>
             <View style={styles.signIn}>
-              <Text style={[styles.textSign, { color: '#fff' }]}>Sign Up</Text>
+              <Text style={[styles.textSign, { color: '#fff' }]}>Đăng nhập</Text>
             </View>
 
             <TouchableOpacity
               style={[styles.signIn, {
-                borderColor: '#009387',
+                borderColor: '#FFCCCC',
                 borderWidth: 1,
                 marginTop: 15
               }]}
               onPress={handleSignUp}
             >
-              <Text style={[styles.textSign, { color: '#009387' }]}>Sign In</Text>
+              <Text style={[styles.textSign, { color: '#FFCCCC' }]}>Đăng kí</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
@@ -282,7 +282,7 @@ export default SignInScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#009387'
+    backgroundColor: '#FFCCCC'
   },
   header: {
     flex: 1,
