@@ -17,6 +17,7 @@ import store from './screens/store'; // Import store bạn đã tạo
 import RootStackScreen from "./screens/RootStackScreen";
 import VnPayPayment from "./screens/VnPayPaymentScreen ";
 import UserScreen from "./screens/UserScreen";
+import Success from "./screens/Success";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { AntDesign, Entypo, Ionicons } from "@expo/vector-icons";
@@ -165,11 +166,13 @@ const App = (route) => {
             },
           }}
         />
+        <Stack.Screen name="Success" component={Success}/>
         <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
         <Stack.Screen name="PaymentMethod" component={PaymentMethod} />
         {/* <Stack.Screen name="Cart" component={Cart} /> */}
         <Stack.Screen name="VnPayPayment" component={VnPayPayment} />
         <Stack.Screen name="RootStack" component={RootStackScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   </Provider>

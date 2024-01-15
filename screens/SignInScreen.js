@@ -36,7 +36,7 @@ const SignInScreen = ({}) => {
         // Lấy giá trị từ TextInput và kiểm tra với dữ liệu từ API
         Keyboard.dismiss();
         setLoading(true);
-        fetch('http://192.168.137.220:9007/users')
+        fetch('http://192.168.180.108:9089/users')
           .then(response => response.json())
           .then(data => {
             setLoading(false);

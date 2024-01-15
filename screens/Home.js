@@ -54,7 +54,7 @@ const Home= ({route}) => {
   useEffect(() => {
     // Thực hiện cuộc gọi API và lấy dữ liệu từ URL của bạn
     
-    fetch('http://192.168.137.220:9007/categorys')
+    fetch('http://192.168.180.108:9089/categorys')
       .then(response => response.json())
       .then(data => {
         data.sort((a, b) => b.id - a.id);
@@ -81,7 +81,7 @@ const Home= ({route}) => {
   useEffect(() => {
     // Thực hiện cuộc gọi API và lấy dữ liệu từ URL của bạn
     setLoading(true);
-    fetch('http://192.168.137.220:9007/products')
+    fetch('http://192.168.180.108:9089/products')
       .then(response => response.json())
       .then(data => {
         setLoading(false);
@@ -195,25 +195,6 @@ const quantity = useState('1');
         <TouchableOpacity onPress={toggleLike}>
           
           <View style={{alignItems: 'flex-end'}}>
-            <View
-              style={{
-                width: 30,
-                height: 30,
-                borderRadius: 20,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor:  isLiked
-                ? 'rgba(245, 42, 42,0.2)'
-                : 'rgba(0,0,0,0.2) ',
-              }}>
-              <Icon
-                name="favorite"
-                size={18}
-                color={ isLiked ? COLORS.red : COLORS.black}
-               
-              />
-            </View>
-           
           </View>
           </TouchableOpacity>
           <View

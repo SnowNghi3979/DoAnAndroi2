@@ -16,7 +16,7 @@ function Cart({ route, navigation }) {
     navigation.navigate('PaymentMethod', { productsForPurchase, totalPrice1 });
     // navigation.navigate('VnPayPayment', { totalPrice });
   };
- 
+  
   const productsForPurchase= useSelector((state) =>state.reducer)
   
   
@@ -82,8 +82,8 @@ function Cart({ route, navigation }) {
           onPress={handleProceedToCheckout}
         >
           <View style={styles.button}>
-            <Ionicons name="cart-outline" size={25} color="#FFF" />
-            <Text style={styles.next}>Next</Text>
+            {/* <Ionicons name="cart-outline" size={25} color="#FFF" /> */}
+            <Text  >Mua hàng</Text>
           </View>
         </TouchableOpacity>
       </View>

@@ -78,8 +78,7 @@ const SplashScreen = ({ navigation }) => {
           },{ transform: [{ translateY: floatAnim }] }
         ]}
       >
-        <Text style={[styles.title, { color: colors.text }]}>Kết nối với mọi người!</Text>
-        <Text style={styles.text}>Đăng nhập bằng tài khoản</Text>
+        <Text style={[styles.title, { color: colors.text }]}>Đăng nhập và đăng kí</Text>
         <View style={styles.button}>
           <TouchableOpacity onPress={() => navigation.navigate('SignInScreen')}>
             <LinearGradient colors={['#FFCCCC', '#FFCCCC']} style={styles.signIn}>

@@ -11,7 +11,7 @@ export default function Order() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://192.168.137.220:9007/paypal');
+      const response = await fetch('http://192.168.180.108:9089/paypal');
       const data = await response.json();
 
       // Kiểm tra xem có sự thay đổi trong dữ liệu hay không
